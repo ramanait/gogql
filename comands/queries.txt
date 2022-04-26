@@ -1,0 +1,60 @@
+commands:
+go get github.com/99designs/gqlgen 
+go run github.com/99designs/gqlgen generate
+go github.com/99designs/gqlgen@upgrade   
+go get github.com/99designs/gqlgen/imports
+go run server.go
+
+Products:
+mutation creatproduct{
+  createProduct(input:{
+    name:"thomson",
+    computers:"lenovo,hp",
+    mobiles:"Mi,realme",
+    cameras:"sony,Nikon",
+    houseHolds:"tables"
+    
+  }){
+    name
+    computers
+    mobiles
+    cameras
+    houseHolds
+  }
+
+
+query {
+
+  Products{
+    name
+    computers
+    mobiles
+    cameras
+    houseHolds
+  }
+}
+friends:
+mutation creatfriends{
+  createFriends(input:{
+      name: "Ak",
+  gender: "male",
+  age:"22",
+  mobileNo:"123456",
+  email:"Ak@gmail.com"
+  }){
+    name
+    gender
+    age
+    mobileNo
+    email
+  }
+}
+query {
+  AllFriends{
+    name
+    gender
+    age
+    mobileNo
+    email
+  }
+}

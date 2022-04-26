@@ -19,6 +19,7 @@ type Query {
   Product(_id: String!): Product!
   Products: [Product!]!
   Friends:[Friends]!
+  AllFriends:[Friends]!
   Friend(_id: String!):Friends!
 }
 
