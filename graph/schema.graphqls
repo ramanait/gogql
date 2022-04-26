@@ -16,8 +16,10 @@ type User {
 
 type Query {
   todos: [Todo!]!
-   Product(_id: String!): Product!
+  Product(_id: String!): Product!
   Products: [Product!]!
+  Friends:[Friends]!
+  Friend(_id: String!):Friends!
 }
 
 input NewTodo {
@@ -28,13 +30,39 @@ input NewTodo {
 type Mutation {
   createTodo(input: NewTodo!): Todo!
   createProduct (input: NewProduct!): Product!
+  createFriends (input: NewFriends!): Friends!
 }
 
 type Product{
   id: ID!
   name: String!
+  computers:String!
+  mobiles:String!
+  cameras:String!
+  houseHolds:String!
 }
 
 input NewProduct{
   name: String!
+  computers:String!
+  mobiles:String!
+  cameras:String!
+  houseHolds:String!
+}
+
+type Friends{
+  id: ID!
+  name: String!
+  gender: String!
+  age:String!
+  mobileNo:String!
+  email:String!
+}
+
+input NewFriends{
+  name: String!
+  gender: String!
+  age:String!
+  mobileNo:String!
+  email:String!
 }

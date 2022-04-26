@@ -2,8 +2,29 @@
 
 package model
 
+type Friends struct {
+	ID       string `json:"id"`
+	Name     string `json:"name"`
+	Gender   string `json:"gender"`
+	Age      string `json:"age"`
+	MobileNo string `json:"mobileNo"`
+	Email    string `json:"email"`
+}
+
+type NewFriends struct {
+	Name     string `json:"name"`
+	Gender   string `json:"gender"`
+	Age      string `json:"age"`
+	MobileNo string `json:"mobileNo"`
+	Email    string `json:"email"`
+}
+
 type NewProduct struct {
-	Name string `json:"name"`
+	Name       string `json:"name"`
+	Computers  string `json:"computers"`
+	Mobiles    string `json:"mobiles"`
+	Cameras    string `json:"cameras"`
+	HouseHolds string `json:"houseHolds"`
 }
 
 type NewTodo struct {
@@ -12,8 +33,12 @@ type NewTodo struct {
 }
 
 type Product struct {
-	ID   string `json:"id"`
-	Name string `json:"name"`
+	ID         string `json:"id"`
+	Name       string `json:"name"`
+	Computers  string `json:"computers"`
+	Mobiles    string `json:"mobiles"`
+	Cameras    string `json:"cameras"`
+	HouseHolds string `json:"houseHolds"`
 }
 
 type Todo struct {
